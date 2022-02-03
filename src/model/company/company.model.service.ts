@@ -2,6 +2,11 @@ import { Injectable } from '@nestjs/common';
 import { ICompany, ICompanyKey } from '..';
 import { CompanyModelRepository } from './company.model.repository';
 
+/**
+ * Company service adapter
+ * All access to the Company model must go through this services.
+ * Decoupled from DB
+ */
 @Injectable()
 export class CompanyModelService {
   constructor(private companyRepository: CompanyModelRepository) {}

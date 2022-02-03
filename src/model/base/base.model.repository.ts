@@ -1,6 +1,12 @@
 import { Model } from 'mongoose';
 import { DeleteResultDto } from '../dtos/result.dto';
 
+/**
+ * Base model repository for mongoose access. Used for all mongoose repositories.
+ * Contains all methods that must be available for every model.
+ * We might want to create an interface with the methods that this class implements
+ * The base repository is coupled to mongoose
+ */
 export abstract class BaseModelRepository<T, D> {
   private model: Model<T>;
 

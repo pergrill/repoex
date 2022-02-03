@@ -4,6 +4,9 @@ import { COMPANY } from '../schemas/company.schema';
 import { CompanyModelRepository } from './company.model.repository';
 import { CompanyModelService } from './company.model.service';
 
+/**
+ * The module is coupled to mongoose
+ */
 @Module({
   imports: [
     MongooseModule.forFeature([{ name: COMPANY.name, schema: COMPANY.schema }]),
